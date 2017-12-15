@@ -1,0 +1,172 @@
+.custom-modal {
+  &.global-pms{
+    .modal-dialog{
+      width: auto;
+
+      .modal-content {
+        max-width: 1100px;
+
+        .modal-body{
+          margin-top: -1px;
+          .holder{
+            /*max-height: 64vh;*/
+          }
+        }
+      }
+    }
+  }
+} 
+.aside-chat {
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  position: absolute;
+  border-right: 2px solid #f78e1e;
+
+  .scroll-holder {
+
+    padding: 0;
+    max-height: 100%;
+    .custom-select-drop {
+      position: relative;
+      padding: 25px 25px 15px;
+      .search-holder {
+        position: relative;
+        i {
+          top: 50%;
+          right: 10px;
+          font-size: 16px;
+          position: absolute;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+}
+.chatroom {
+  fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0;
+  }
+  .scroll-holder {
+    max-height: 64vh;
+    height: 64vh;
+    padding: 86px 0 0;
+  }
+
+  .post-msg {
+    margin: 25px 25px 25px;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    .post-holder {
+      margin: 0 0 25px;
+      position: relative;
+      padding: 0 0 0 75px;
+
+      .post-content {
+        font-size: 18px;
+        line-height: 1.25;
+        margin: 0 0 5px;
+        position: relative;
+        background: #f1f1f1;
+        padding: 7px 15px 5px;
+        border: solid 2px #c0e890;
+        color: #fff;
+        background: #a0cf67;
+
+        &:after {
+          top: 13px;
+          right: 100%;
+          margin: 0 -1px 0 0;
+          z-index: 2;
+          content: '';
+          position: absolute;
+          border: solid transparent;
+          border-width: 8px 8px 8px 0;
+          border-right-color: #a0cf67;
+        }
+
+        &:before {
+          top: 11px;
+          right: 100%;
+          content: '';
+          position: absolute;
+          border: solid transparent;
+          border-width: 10px 10px 10px 0;
+          border-right-color: #c0e890; 
+        }
+
+        
+      }
+    }
+
+    .post-holder.even {
+      padding: 0 75px 0 0;
+
+      .img-holder {
+        right: 0;
+        left: auto;
+      }
+
+      .email {
+        text-align: right;
+      }
+
+      time {
+        text-align: right;
+      }
+
+      .post-content {
+        color: #fff;
+        background: #00afef;
+        border-color: #76daff;
+
+        &:before {
+          left: 100%;
+          right: auto;
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent #76daff;
+        }
+
+        &:after {
+          left: 100%;
+          right: auto;
+          border-width: 8px 0 8px 8px;
+          border-left-color: #00afef;
+          margin: 0 0 0 -1px;
+        }
+      }
+    }
+  }
+}
+.scroll-holder {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.global-pms-chat-call-record-text{
+  .long-text-width{
+    width: 350px;
+  }
+  .small-text-width{
+    width: 260px;
+  }
+  .call-record-text{
+    display: table-cell;
+  }
+  .call-record-date{
+    display: table-cell;
+  }
+  &:after{
+    clear: both;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../assets/less/_variables';
+
+.sites-users-page {
+  .search-sites-users-panel {
+    .form-search {
+      & > .fields-holder {
+        width: calc(~'100% - 450px');
+      }
+
+      @media screen and (max-width: @psd) {
+        .search-area {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .client-sites-holder {
+    margin-top: 30px;
+  }
+  table {
+    tbody {
+      tr {
+        td {
+          vertical-align: top;
+        }
+
+        td:last-child {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.receipts {
+  .sm-mixin {
+    margin: 0 13px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .input-mixin {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    border-radius: 2px;
+    transition: all 0.25s linear;
+    border: 2px solid #636363;
+
+    input {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-color: #a0cf67;
+    }
+
+    &:before {
+      opacity: 0;
+      display: block;
+      cursor: pointer;
+      content: '\e916';
+      text-indent: -2px;
+      text-align: center;
+      font: 14px/16px 'icomoon';
+      transition: all 0.25s linear;
+    }
+  }
+
+  span.jcf-checkbox {
+    margin: 0;
+  }
+
+  .form-search {
+    .fields-holder {
+      overflow: hidden;
+      width: auto;
+    }
+
+    .btns-area {
+      margin: 0 0 0 50px;
+      width: auto;
+      bottom: auto;
+      position: static;
+    }
+  }
+
+  .table-holder {
+    border-top: #f78e1e solid 50px;
+  }
+
+  .table {
+    thead {
+      tr {
+        th {
+          transition: all 0.25s linear;
+          padding: 16px 5px 16px 13px;
+
+          &:hover {
+            cursor: pointer;
+            color: #999;
+          }
+
+          &.up {
+            .caret-arrow {
+              &:before {
+                border-width: 0 4px 4px;
+              }
+            }
+          }
+
+          &.down {
+            .caret-arrow {
+              &:before {
+                border-width: 4px 4px 0;
+                border-color: #354052 transparent transparent;
+              }
+            }
+          }
+
+          &:first-child {
+            padding-left: 11px;
+            padding-right: 0;
+
+            span.jcf-checkbox {
+              margin: 0;
+            }
+
+            span.sm-container {
+              .sm-mixin;
+
+              &.checked {
+                span.input-style {
+                  background: #a0cf67;
+                  border-color: #a0cf67;
+
+                  &:before {
+                    opacity: 1;
+                  }
+                }
+              }
+
+              span.input-style {
+                .input-mixin;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            padding-left: 5px;
+          }
+
+          &:last-child {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          .caret-arrow {
+            font-size: 0;
+            line-height: 0;
+            margin: 0 0 0 2px;
+            display: inline-block;
+            vertical-align: middle;
+
+            &:before {
+              content: '';
+              position: absolute;
+              border: solid transparent;
+              border-width: 0 4px;
+              margin: -3px 0 0;
+              border-bottom-color: #354052;
+              transition: border 0.25s ease;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 26px 5px 26px 13px;
+
+          &:first-child {
+            padding-left: 11px;
+            padding-right: 0;
+
+            span.sm-container {
+              .sm-mixin;
+
+              &.checked {
+                span.input-style {
+                  background: #a0cf67;
+                  border-color: #a0cf67;
+
+                  &:before {
+                    opacity: 1;
+                  }
+                }
+              }
+
+              span.input-style {
+                .input-mixin;
+              }
+            }
+
+            &:after {
+              content: none;
+            }
+          }
+
+          &:nth-child(2) {
+            padding-left: 5px;
+
+            &:after {
+              content: counters(item, ".", decimal) " ";
+              counter-increment: item;
+            }
+          }
+
+          &:last-child {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

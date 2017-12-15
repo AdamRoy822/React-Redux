@@ -1,0 +1,209 @@
+@import "_custom-icons";
+
+* {
+	max-height: 1000000px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-width: 1200px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&.page-lightbox-active,
+	&.body-datepicker-active {
+		height: 100%;
+		overflow-y: hidden;
+	}
+}
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+::-webkit-input-placeholder {
+  color: #636363;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #636363;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #636363;
+}
+
+:-ms-input-placeholder {
+  color: #636363;
+}
+
+a,
+button,
+[type] {
+	white-space: normal;
+	transition: all 0.25s;
+}
+
+a.hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.btn {
+	border-radius: 2px;
+	border-width: 2px;
+  padding: 5px 12px;
+	font-weight: 600;
+	white-space: normal;
+	transition: all 0.25s;
+	text-transform: uppercase;
+
+
+	&:focus,
+	&:active:focus,
+	&:hover {
+		outline: none;
+		box-shadow: none;
+	}
+
+	&.btn-default {
+		&:focus,
+		&:active:focus,
+		&:hover {
+			background: #76daff;
+			border-color: #76daff;
+		}
+	}
+
+	&.btn-primary {
+		&:focus,
+		&:active:focus,
+		&:hover {
+			color: @btn-primary-bg;
+			background: @btn-primary-color;
+			border-color: @btn-primary-color;
+		}
+	}
+
+	&.btn-gray {
+		color: #fff !important;
+		background: darken(#999, 10%);
+
+		&:hover {
+			background: #999;
+		}
+	}
+
+	&.btn-gray-outline {
+		background: #fff;
+		color: darken(#999, 10%);
+		border: darken(#999, 10%) solid 2px;
+
+		&:hover,
+		&:focus,
+		&:active:focus {
+			color: #fff;
+			background: darken(#999, 10%);
+		}
+	}
+}
+
+.modal-dialog {
+  transform: translate(0, 75px) !important;
+}
+
+.table-responsive {
+  overflow-x: hidden;
+
+  .table {
+    thead {
+      tr {
+        th {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.label,
+label {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	display: inline;
+	white-space: normal;
+	font-weight: inherit;
+	.font(inherit, inherit);
+}
+
+.form-control {
+	border-width: 2px;
+	padding: 6px 15px;
+
+	&:focus {
+		color: #949ca1;
+		outline: none;
+		box-shadow: none;
+		border-color: #00afef;
+		.placeholder(#949ca1);
+	}
+
+	&[readonly] {
+		background: #fff;
+	}
+
+	&:hover {
+		border-color: #00afef;
+	}
+}
+
+.has-error {
+	.form-control,
+	.jcf-select {
+		border-color: #f00;
+	}
+}
+
+
+input[type=number] {
+	-moz-appearance: textfield;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+}
+
+.datepicker-input {
+	cursor: pointer;
+}
+
+#wrapper {
+	overflow: hidden;
+	position: relative;
+	padding: 102px 0 0 261px;
+
+	.home-page & {
+		padding-top: 101px;
+	}
+}
+
+@media screen and (max-width: @psd) {
+
+	#wrapper {
+		padding-left: 220px;
+	}
+}
+
+.main-heading {
+	color: #99cc66;
+    font-weight: 700;
+    margin: 0 0 34px;
+    text-transform: uppercase;
+}

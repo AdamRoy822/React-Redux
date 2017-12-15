@@ -1,0 +1,48 @@
+@import "~react-select/less/select.less";
+@import "~assets/less/_custom.less";
+
+/* react-select styles */
+.Select.form-control {
+  padding: 0;
+}
+
+.Select-control {
+  border: none !important;
+  cursor: pointer;
+}
+
+.Select-placeholder {
+  color: @input-color !important;
+  padding-left: 15px !important;
+}
+
+.Select-menu-outer {
+  margin: 2px -2px 0 -2px;
+  width: calc(100% + 1px);
+  border: 2px solid #CCC;
+  padding: 2px;
+}
+
+.top-positioned .Select-menu-outer {
+  top: auto;
+  bottom: 100%;
+}
+
+.Select-arrow-zone {
+  padding-right: 10px;
+}
+
+.Select-option.is-focused {
+  background-color: #00AFEF;
+  color: #FFF;
+}
+
+/* react-toggle-button styles */
+
+div.toggle > div:first-child {
+  width: 160px !important;
+
+  > div {
+    color: red;
+  }
+}

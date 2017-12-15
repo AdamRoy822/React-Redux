@@ -1,0 +1,322 @@
+/* chat room */
+
+.btn-chat-popup {
+	color: #fff;
+	min-width: 70px;
+	.font(20px, 71px);
+	text-align: center;
+	margin: 0 10px 0 0;
+	
+	&:focus,
+	&:active,
+	&:active:focus,
+	&:hover {
+		color: #fff;
+		background: #76daff;
+	}
+}
+
+#chat-popup {
+	
+	.lightbox-content {
+		max-width: 1024px;
+		overflow: hidden;
+		position: relative;
+		
+		&:after {
+			top: 60px;
+			bottom: 0;
+			width: 2px;
+			content: '';
+			left: 300px;
+			z-index: 13;
+			background: #f78e1e;
+			position: absolute;
+		}
+	}
+	
+	.scroll-holder {
+		max-height: 64vh;
+		padding: 86px 0 0;
+		
+		@media screen and(max-height: 500px) {
+			max-height: 56vh;
+		}
+	}
+	
+	.aside-chat {
+	
+		.scroll-holder {
+			padding: 0;
+			max-height: 100%;
+		}
+	}
+	
+	.post-msg {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	
+	.custom-select-drop {
+		position: relative;
+		padding: 25px 25px 15px;
+	}
+	
+	.search-holder {
+		position: relative;
+		
+		.form-control {
+			&:focus ~ .list {
+				border-width: 2px;
+				max-height: 160px;
+			}
+		}
+		
+		i {
+			top: 50%;
+			right: 10px;
+			font-size: 16px;
+			position: absolute;
+			.transform(translate(0,-50%));
+		}
+		
+		.list {
+			left: 0;
+			top: 100%;
+			padding: 0;
+			z-index: 10;
+			width: 100%;
+			max-height: 0;
+			overflow: auto;
+			background: #fff;
+			.font(18px, 24px);
+			position: absolute;
+			border: solid 0 #ccc;
+			transition: all 0.25s;
+			
+			li {
+			    margin: 3px;
+				cursor: pointer;
+				padding: 7px 8px;
+			}
+			
+			li:hover {
+				color: #fff;
+				background: #00afef;
+			}
+		}
+	}
+	
+}
+
+.aside-chat {
+	top: 60px;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	position: absolute;
+	
+	
+	ul {
+		margin: 0;
+		padding: 3px;
+		.font(14px);
+		
+		a {
+			display: block;
+			color: #181818;
+			position: relative;
+			//padding: 12px 67px;
+			white-space: nowrap;
+			line-height: 1.125;
+			padding: 12px 12px 12px 67px;
+			
+			&:before {
+				opacity: 0;
+				content: '';
+				.position(0);
+				background: #00afef;
+				transition: all 0.25s ease;
+			}
+			
+			> * {
+				z-index: 2;
+				position: relative;
+			}
+			
+			time {
+				//position: absolute;
+			}
+		}
+	}
+	
+	a:hover,
+	.active a {
+		color: #fff;
+		
+		&:before {
+			opacity: 1;
+		}
+		
+		time {
+			color: #fff;
+		}
+	}
+	
+	.user-img {
+		top: 50%;
+		left: 12px;
+		.size(43px);
+		margin: -21px 0 0;
+		position: absolute;
+		border-radius: 100%;
+		
+		img {
+			.img;
+			border-radius: 100%;
+		}
+	}
+	
+	.name,
+	p {
+		overflow: hidden;
+		max-width: 100%;
+		text-overflow: ellipsis;
+	}
+	
+	p {
+		margin: 0 0 5px;
+		&:first-letter { text-transform: capitalize; }
+	}
+	
+	.name {
+		display: block;
+		font-size: 18px;
+		margin: 0 0 5px;
+		text-transform: capitalize;
+	}
+	
+	time {
+		color: #949ca1;
+		display: block;
+		font-size: 14px;
+		white-space: normal;
+		padding: 0 25px 0 0;
+		transition: all 0.25s ease;
+	}
+	
+	.counter-circle {
+		top: 0;
+		right: 0;
+		position: absolute;
+		
+		&:empty { display: none; }
+	}
+}
+
+.chatroom {
+	position: relative;
+	margin: 0 0 0 300px;
+}
+
+.chat-area.js-tab-hidden {
+	width: 100%;
+	top: -9999px;
+	left: -9999px;
+	position: absolute;
+}
+
+.chat-area {
+	padding: 0 0 87px;
+	
+	header {
+		top: 0;
+		left: 0;
+		right: 17px;
+		z-index: 12;
+		//height: 73px;
+		color: #101010;
+		
+		background: #fff;
+		line-height: 30px;
+		position: absolute;
+		text-align: center;
+		padding: 17px 18px 14px;
+		
+		
+		.name {
+			display: block;
+			font-size: 21px;
+			margin: 0 0 -5px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		
+		a {
+			text-transform: capitalize;
+			
+			&:hover,
+			&:focus {
+				color: #76daff;
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	footer {
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 2;
+		height: 87px;
+		background: #fff;
+		position: absolute;
+		border-top: solid 2px #f78e1e;
+		
+		textarea.form-control {
+			height: 100%;
+			resize: none;
+			border-width: 0;
+			//overflow-y: scroll;
+			//padding: 8px 103px 8px 25px;
+			padding: 8px 125px 15px 26px;
+		}
+		
+		.btn-default {
+			top: 50%;
+			right: 25px;
+			min-height: 40px;
+			margin: -20px 0 0;
+			position: absolute;
+		}
+	}
+	
+	.img-holder {
+		top: 0;
+		left: 0;
+		.size(43px);
+		position: absolute;
+		
+		img {
+			.img;
+			border-radius: 100%;
+		}
+	}
+	
+	.post-msg {
+		time,
+		.email {
+			display: block;
+		}
+		
+		.email {
+			text-transform: capitalize;
+		}
+		
+		time {
+			font-size: 14px;
+			color: #949ca1;
+		}
+	}
+}

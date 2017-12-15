@@ -1,0 +1,306 @@
+.lightbox-content{
+
+}
+
+.holder{
+  overflow: hidden;
+
+  .dateRange-helper{
+    position: relative;
+    overflow: hidden;
+
+    .emit-border{
+      display: inline-block;
+      height: 100%;
+      width: 20%;
+      border-right: 2px #f78e1e solid;
+      position: absolute;
+    }
+
+    .right-part{
+      width: 80%;
+      float: right;
+      padding: 0 10px 20px 10px;
+
+      span{
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+        cursor: pointer;
+        background: #f78e1e;
+        transition: all 0.25s;
+        margin-top: 10px;
+
+        &.left{
+          float: left;
+        }
+
+        &.right{
+          float: right;
+          margin-right: 3px;
+        }
+
+        &:hover{
+          cursor: inherit;
+        }
+      }
+
+      .btn-block{
+        margin: 70px 0 0 0;
+      }
+    }
+  }
+}
+
+.rdr-DateRange, .rdr-Calendar{
+  position: relative;
+  overflow: hidden;
+
+  .rdr-PredefinedRanges{
+    width: 20% !important;
+    float: none !important;
+    vertical-align: top !important;
+    overflow-y: auto;
+    font-size: 18px;
+    line-height: 24px;
+    height: 100%;
+    overflow-x: hidden;
+    padding: 20px 3px;
+    text-transform: uppercase;
+    border-right: 2px #f78e1e solid;
+    position: absolute;
+
+    a{
+      font-size: inherit !important;
+      border-radius: 0 !important;
+      margin-bottom: 0 !important;
+      background: #FFFFFF !important;
+      color: #101010 !important;
+      padding: 7px 18px !important;
+      white-space: normal;
+      transition: all 0.25s;
+
+      &:hover, &.active{
+        color: #fff !important;
+        background: #00afef !important;
+      }
+    }
+  }
+
+  .rdr-Calendar:nth-child(2) {
+    margin-left: 21% !important;
+  }
+
+  .rdr-Calendar{
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    text-align: center;
+    border-collapse: inherit;
+    border: #f78e1e solid 2px;
+    //width: 38% !important;
+    margin: 10px 10px 0 10px !important;
+    height: 40px !important;
+
+  }
+
+  .rdr-MonthAndYear{
+
+    .rdr-MonthAndYear-innerWrapper{
+      overflow: hidden;
+      color: #fff;
+      background: #f78e1e;
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 40px !important;
+
+      .rdr-MonthAndYear-divider{
+        visibility: hidden;
+        display: none;
+      }
+
+      .rdr-MonthAndYear-month, .rdr-MonthAndYear-year{
+        padding: 6px 10px 6px 0;
+        font-size: 20px !important;
+        line-height: 25px !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: inline-block;
+        height: 100%;
+      }
+
+      .rdr-MonthAndYear-button{
+        padding: 0 !important;
+        margin: 6px 10px !important;
+        width: 29px !important;
+        height: 29px !important;
+        font-size: 0;
+        line-height: 0;
+        display: inherit !important;
+        box-sizing: border-box;
+        height: auto !important;
+        width: auto !important;
+        border-radius: 0 !important;
+        background: none !important;
+
+        &:hover{
+
+          i:before{
+            color: #f78e1e !important;
+            background: #fff !important;
+          }
+        }
+
+        i{
+          display: block;
+          width: 29px !important;
+          height: 29px !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          border: none !important;
+          text-align: center;
+        }
+
+        &.prev{
+          i:before{
+            width: 28px;
+            height: 28px;
+            color: #fff;
+            margin: 0;
+            border: none;
+            display: block;
+            cursor: pointer;
+            background: #ffc689;
+            border-radius: 3px;
+            content: "\e915";
+            font: 24px/28px 'icomoon';
+            transition: all 0.25s ease;
+          }
+        }
+
+        &.next{
+          i:before{
+            float: right;
+            width: 28px;
+            height: 28px;
+            color: #fff;
+            margin: 0 0 0 auto;
+            border: none;
+            display: block;
+            cursor: pointer;
+            background: #ffc689;
+            border-radius: 3px;
+            content: "\e90c";
+            font: 24px/28px 'icomoon';
+            transition: all 0.25s ease;
+          }
+        }
+      }
+    }
+  }
+
+  @cube: 52px;
+
+  .rdr-WeekDays{
+    color: #fff;
+    background: #ffc689;
+    font-size: 18px !important;
+    width: 100% !important;
+
+    .rdr-WeekDay{
+      line-height: 22px !important;
+      padding: 8px !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      height: inherit !important;
+      width: @cube !important;
+      transition: all 0.25s !important;
+
+      &:hover{
+        cursor: inherit;
+      }
+    }
+  }
+
+  .rdr-Days{
+
+    .rdr-Day{
+      padding: 0;
+      line-height: 52px !important;
+      transition: all 0.25s !important;
+      width: @cube !important;
+      height: @cube !important;
+
+      &:hover{
+        color: #fff !important;
+        font-weight: 700;
+        background: #a0cf67 !important;
+      }
+
+      &.is-passive{
+        &:hover{
+          background: #fff !important;
+          font-weight: inherit !important;
+          color: inherit !important;
+        }
+      }
+
+      &.is-selected{
+        color: #fff !important;
+        font-weight: 700;
+        background: #a0cf67 !important;
+      }
+
+      &.is-inRange{
+        background: #ededed !important;
+
+        &:hover{
+          color: #fff !important;
+          font-weight: 700;
+          background: #a0cf67 !important;
+        }
+      }
+
+      &.is-passive.is-inRange{
+        opacity: 1 !important;
+        background: #ededed !important;
+
+        &:hover{
+          font-weight: inherit !important;
+          color: rgb(149, 165, 166) !important;
+        }
+      }
+
+      &.is-passive.is-selected{
+        opacity: 1 !important;
+        color: #fff !important;
+        font-weight: 700;
+        background: #a0cf67 !important;
+      }
+
+    }
+  }
+
+  @media screen and (min-width: 801px) {
+    .rdr-Calendar {
+      width: 38% !important;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .rdr-Calendar {
+      width: inherit !important;
+    }
+
+    .rdr-Calendar:nth-child(3) {
+      margin-left: 21% !important;
+    }
+
+    .dateRange-helper{
+      .btn-block{
+        text-align: center;
+      }
+    }
+  }
+}

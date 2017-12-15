@@ -1,0 +1,111 @@
+#image_file{
+  display: none;
+}
+
+.form-control[disabled]{
+  background-color: #eeeeee;
+}
+
+.btn{
+  padding: 5px 12px !important;
+}
+
+.profile-page-edit-password-btn{
+  padding: 5px 12px !important;
+}
+
+.btn-grey{
+  color: #fff;
+  background: #808080;
+  &:hover{
+    background: #999;
+  }
+}
+.file-img .image {
+  width: 180px;
+  height: 180px;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 4px solid #636363;
+}
+.file-img .image:hover img {
+  transform: scale(1.1);
+}
+.file-img .image img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  transition: all 0.25s linear;
+}
+
+.profile-page-modal {
+  .modal-content {
+    border-radius: 0px;
+    margin: 0 auto;
+    max-width: 590px;
+    background: #fff;
+    position: relative;
+    border: #f78e1e solid 2px;
+  }
+  .modal-header {
+    color: #fff;
+    position: relative;
+    background: #f78e1e;
+    .modal-title{
+      font-size: 21px;
+      line-height: 1.25;
+      display: block;
+      font-weight: 700;
+    }
+    .lightbox-close{
+      &.close {
+        top: 50%;
+        opacity: 1;
+        right: 10px;
+        color: #fff;
+        font-size: 26px;
+        line-height: 1;
+        width: 26px;
+        height: 26px;
+        text-shadow: none;
+        position: absolute;
+        margin: -13px 0 0;
+        i {
+          display: block;
+          transition: all 0.25s;
+          &::before{
+            font-family: 'icomoon' !important;
+          }
+        }
+        &:hover {
+          color: #fff;
+          margin: -11px -2px 0 0;
+          transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  .modal-body{
+    padding: 0px;
+    .field-row {
+      font-size: 0;
+      line-height: 0;
+      margin: 0 0 15px;
+      position: relative;
+    }
+    label {
+      width: 35%;
+      color: #101010;
+      margin: -1px 0;
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 0 5px 0 0;
+    }
+  }
+}

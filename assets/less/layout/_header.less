@@ -1,0 +1,447 @@
+/* header */
+#header {
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	position: fixed;
+	min-width: 970px;
+	padding: 0 0 0 261px;
+	//box-shadow: 0 -1px 2px -1px rgba(0,0,0, 0.3);
+
+	.container-fluid {
+		padding: 0;
+		background: #00afef;
+	}
+
+	.logo {
+		top: 20px;
+		left: 15px;
+		width: 234px;
+		position: absolute;
+		margin: 0 0 0 0;
+
+		a {
+			display: block;
+		}
+
+		img {
+			.img;
+		}
+	}
+}
+
+.emails,
+.notifications {
+	margin: 0;
+
+	.opener {
+		color: #fff;
+		display: block;
+		min-width: 70px;
+		.font(20px, 71px);
+		position: relative;
+		text-align: center;
+
+		&:hover,
+		&:focus,
+    &.active {
+			outline: none;
+      background: #76daff;
+		}
+	}
+
+	.counter {
+		top: 19px;
+		right: 21px;
+		color: #fff;
+		.size-min(16px);
+		font-weight: 600;
+		.font(12px, 16px);
+		text-align: center;
+		position: absolute;
+		background: #f78e1e;
+		border-radius: 100%;
+	}
+
+	.icomoon-envelop {
+		top: -3px;
+		font-size: 16px;
+		position: relative;
+	}
+}
+
+/* notifications  */
+.notifications {
+	position: relative;
+	margin: 0;
+
+	.icomoon-bell {
+		&:before { content: "\e91c"; }
+	}
+
+}
+
+.emails {
+	.counter {
+		top: 20px;
+		right: 15px;
+		display: none;
+	}
+
+	.icomoon-envelop {
+		top: 6px;
+		font-size: 32px;
+		position: relative;
+
+		&:before { content: "\e91d"; }
+	}
+}
+
+.logged-user-drop,
+.notifications-drop {
+	top: 100%;
+	position: absolute;
+}
+
+.notifications-drop {
+	top: 100%;
+	left: 0;
+	width: 438px;
+	position: absolute;
+
+	.well {
+		padding: 0;
+		margin: 0;
+		background: #fff;
+		border-radius: 0;
+		position: relative;
+		box-shadow: none;
+		border: solid 2px #ccc;
+	}
+
+	.title {
+		color: #354052;
+		display: block;
+		.font(18px, 24px);
+		font-weight: 400;
+		padding: 8px 14px;
+		text-transform: uppercase;
+		border-bottom: #ccc solid 2px;
+	}
+
+
+	ul {
+		margin: 0;
+		padding: 3px;
+		max-height: 333px;
+		.font(18px);
+
+
+
+		a {
+			display: block;
+			color: #354052;
+			min-height: 65px;
+			position: relative;
+			padding: 14px 5px 14px 69px;
+
+			&:hover {
+				background: #00afef;
+
+				color: #fff;
+
+				time {
+					color: #fff;
+				}
+			}
+		}
+
+		li {
+			&:first-child {
+				a {
+					padding: 3px 10px 5px 69px;
+				}
+			}
+
+			&:nth-child(3) {
+				a {
+					padding: 6px 5px 7px 69px;
+				}
+			}
+		}
+
+		time {
+			.font(14px);
+			display: block;
+			color: #949ca1;
+			font-weight: 400;
+			transition: all 0.25s;
+		}
+
+		.img-circle {
+			top: 50%;
+			left: 11px;
+			.size(43px);
+			margin: -22px 0 0;
+			overflow: hidden;
+			position: absolute;
+			border-radius: 100%;
+
+			img {
+				.img;
+				border-radius: 100%;
+			}
+		}
+	}
+
+	p {
+		margin: 0;
+		transition: all 0.25s;
+
+		strong {
+			text-transform: capitalize;
+		}
+	}
+
+	.btn-block {
+		.font(18px, 22px);
+		padding: 9px 10px;
+		border-top: #ccc solid 2px;
+
+		a {
+			color: #00afef;
+
+			&:hover {
+				color: #76daff;
+			}
+		}
+	}
+}
+
+.help-drop {
+	position: relative;
+}
+
+
+.link-help {
+	color: #fff;
+	font-weight: 800;
+	min-width: 70px;
+	.font(26px, 68px);
+	text-align: center;
+	min-height: 71px;
+
+	.active &,
+	&:focus,
+	&:active:focus,
+	&:hover {
+		color: #fff;
+		background: #76daff;
+	}
+}
+
+.btn-chat-popup {
+	position: relative;
+
+  &.active {
+    background-color: #76daff;
+  }
+	.counter {
+		top: 19px;
+		right: 17px;
+		color: #fff;
+		.size-min(16px);
+		font-weight: 600;
+		.font(12px, 16px);
+		text-align: center;
+		position: absolute;
+		background: #f78e1e;
+		border-radius: 100%;
+	}
+}
+
+/* get-credit */
+.get-credits {
+  color: #101010;
+  padding: 17px 0 0;
+  line-height: 30px;
+  > * {
+    .align(@align: middle);
+  }
+  .icomoon-credit {
+    color: #fff;
+    .font(20px, 30px);
+    padding: 5px 10px 0 6px;
+  }
+  .btn-default {
+    .bg(#76daff);
+    color: #fff;
+    padding: 0 12px;
+    font-weight: 600;
+    line-height: 26px;
+    border-radius: 2px;
+    margin: 2px 0 -2px 12px;
+    border: solid 2px #fff;
+    &:focus, &:active:focus, &:hover {
+      border-color: #fff;
+    }
+  }
+}
+
+.btn-chat-popup {
+	color: #fff;
+  	min-width: 70px;
+  	font-size: 20px;
+  	line-height: 71px;
+  	text-align: center;
+  	margin: 0 10px 0 0;
+  	position: relative;
+  	.counter {
+	  	top: 19px;
+		right: 17px;
+		color: #fff;
+		min-width: 16px;
+		min-height: 16px;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 16px;
+		text-align: center;
+		position: absolute;
+		background: #f78e1e;
+		border-radius: 100%;
+	}
+}
+.btn-chat-popup:focus,
+.btn-chat-popup:active,
+.btn-chat-popup:active:focus,
+.btn-chat-popup:hover {
+  color: #fff;
+  background: #76daff;
+}
+
+/* logged-user-area */
+.logged-user-area {
+	position: relative;
+
+	.opener {
+		.font(18px);
+		color: #101010;
+		display: block;
+		padding: 12px 11px 16px 19px;
+
+		> * {
+			.align(@align: middle);
+		}
+
+		.caret {
+			margin: 4px 0 0 24px;
+			border-width: 7px 5px 0;
+			border-style: solid dashed;
+			border-color: #fff transparent transparent;
+		}
+
+		&:focus { outline: none; }
+	}
+
+	&.active .opener,
+	.opener:hover {
+
+		background: #76daff;
+	}
+
+	.img-circle {
+		.size(43px);
+		overflow: hidden;
+		margin: 0 13px 0 0;
+		border-radius: 100%;
+
+		img {
+			.img;
+			border-radius: 100%;
+		}
+	}
+
+	.logged-user-drop {
+		top: 100%;
+		right: 0;
+		width: 240px;
+		border-width: 0;
+		background: none;
+		.font(18px, 22px);
+		position: absolute;
+		box-shadow: none;
+	}
+
+	.well {
+		padding: 3px;
+		margin: 0;
+		position: relative;
+		background: @white;
+		box-shadow: none;
+		border-radius: 0;
+		border: solid 2px #ccc;
+
+
+		ul {
+			margin: 0;
+
+			a {
+				color: #354052;
+				display: block;
+				padding: 9px 8px;
+				text-transform: uppercase;
+
+				&:hover {
+					color: @white;
+					background: #00afef;
+				}
+			}
+
+
+		}
+	}
+}
+
+@media screen and (max-width: @psd) {
+  #header {
+    padding: 0 0 0 220px;
+    .logo {
+      width: 192px;
+    }
+  }
+  .notifications-drop {
+    .title {
+      font-size: 15px;
+    }
+    ul {
+      .font(15px);
+      time {
+        font-size: 12px;
+      }
+    }
+    .btn-block {
+      font-size: 15px;
+    }
+  }
+  .get-credits {
+    .icomoon-credit {
+      padding: 5px 3px 0 0;
+    }
+  }
+  .help-drop {
+    .default-slide {
+      .font(15px);
+    }
+  }
+  .logged-user-area {
+    .logged-user-drop {
+      .font(15px);
+    }
+    .well {
+      ul {
+        max-height: 184px;
+      }
+    }
+  }
+}

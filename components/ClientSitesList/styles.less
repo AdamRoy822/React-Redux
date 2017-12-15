@@ -1,0 +1,128 @@
+.client-sites {
+  .client-site-container {
+    .fa {
+      font-size: 1.3em;
+      margin-left: 5px;
+      vertical-align: bottom;
+      font-weight: 100;
+    }
+    .toggle-assigned-users {
+      position: relative;
+
+      .toggle {
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        background: #fff;
+        min-width: inherit;
+        position: relative;
+        margin-left: 8px;
+        border: solid #00afef 2px;
+
+        &:after,
+        &:before {
+          top: 50%;
+          left: 50%;
+          content: '';
+          background: #00afef;
+          position: absolute;
+          transition: all 0.25s;
+          transform: translate(-50%,-50%);
+        }
+
+        &:before {
+          width: 2px;
+          height: 10px;
+        }
+
+        &:after {
+          width: 10px;
+          height: 2px;
+        }
+
+        &:hover {
+          outline: none;
+          background: #fff;
+          border-color: #76daff;
+          box-shadow: none !important;
+
+          &:after,
+          &:before {
+            background: #76daff;
+          }
+        }
+
+        &.toggle-minus {
+          box-shadow: none !important;
+
+          &:before {
+            transform: translate(-50%,-50%) rotate(-90deg);
+          }
+        }
+      }
+    }
+    .assigned-users-list {
+      margin-top: 5px;
+
+      .assigned-user {
+        padding: 5px 0;
+
+        .edit-assigned-user {
+          .edit-icon {
+            top: -2px;
+            left: auto;
+            padding: 0;
+            right: auto;
+            color: #00afef;
+            border-width: 0;
+            font-size: 20px;
+            background: none;
+            min-width: inherit;
+            position: relative;
+            margin-left: 8px;
+
+            .pencil-square {
+              font-family: 'icomoon' !important;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+
+              &:before {
+                content: "\e920";
+              }
+            }
+          }
+        }
+      }
+    }
+
+    td {
+      &.name {
+        width: 16%;
+      }
+
+      &.principal-investigator {
+        width: 18%;
+      }
+
+      &.phone {
+        width: 14%;
+      }
+
+      &.address {
+        width: 20%;
+      }
+
+      &.assigned-users {
+        width: 22%;
+      }
+
+      &.action {
+        width: auto;
+      }
+    }
+  }
+}
